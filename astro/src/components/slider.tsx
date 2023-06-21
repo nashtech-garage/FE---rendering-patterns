@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function Slider() {
-    return (<div className='my-4'>
+    return (<div className='my-4 w-full'>
         <Carousel showThumbs={true} dynamicHeight={false} width="100%" centerMode={true}>
             <div>
                 <img src="/1.png" alt="Image 1" width={'1200'} height={'400'} />
