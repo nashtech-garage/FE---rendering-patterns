@@ -1,3 +1,11 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react",
+    "types": ["@astrojs/image/client"]
+  },
   "extends": "astro/tsconfigs/strict"
 }

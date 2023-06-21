@@ -2,7 +2,6 @@
 import Slider from "@/components/slider";
 import Product from "@/components/product";
 import Layout from "@/app/layout";
-import Image from 'next/image';
 import Buy from "@/components/buy";
 import Review from "@/components/review";
 
