@@ -7,8 +7,8 @@ import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout title="Home">
-	<Slider />
-	<Product />
-	<Testimonial />
-	<Contact client:only />
+	<Slider client:idle /> <!-- Island Dynamic & Progressive Hydration - Later -->
+	<Product /> <!-- Island Static -->
+	<Testimonial client:load /> <!-- Island Dynamic & Progressive Hydration - First -->
+	<Contact client:only /> <!-- Without SSR -->
 </Layout>
