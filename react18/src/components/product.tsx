@@ -1,3 +1,4 @@
+import React from 'react';
 export default function Product() {
     return (<section className='my-4'>
         <h2>HOT PRODUCTS</h2>

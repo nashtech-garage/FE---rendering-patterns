@@ -1,3 +1,4 @@
+import React from 'react';
 // @ts-ignore  
 import ReactTestimonial from 'react-testimonial';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 export default function Buy() {
     return (<>
         <h2 className="my-4 font-bold">Product Name</h2>

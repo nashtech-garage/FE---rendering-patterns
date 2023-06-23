@@ -1,3 +1,4 @@
+import React from 'react';
 export default function Review({id}:{id:number}) {
     return (<div className="card content mx-auto my-2">
     <div className="flex space-x-4">

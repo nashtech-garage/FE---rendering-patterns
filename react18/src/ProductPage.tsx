@@ -1,3 +1,4 @@
+import React from 'react';
 import Buy from "@/components/buy";
 import Product from "@/components/product";
 import Slider from "@/components/slider";
