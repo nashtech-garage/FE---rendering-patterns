@@ -1,9 +1,16 @@
+import Contact from "@/components/contact";
+import Product from "@/components/product";
+import Slider from "@/components/slider";
+import Testimonial from "@/components/testimonial";
+
 function HomePage() {
     return (
-      <div>
-        <h1>Trang chủ</h1>
-        {/* Nội dung của trang chủ */}
-      </div>
+      <>
+        <Slider />
+        <Product />
+        <Testimonial />
+        <Contact />
+      </>
     );
   }
   
