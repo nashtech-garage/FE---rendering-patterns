@@ -5,7 +5,7 @@ import App from "@/App";
 
 export const render = (request, response) => {
     response.setHeader("content-type", "text/html");
-    response.write(`<html><body>`);
+    response.write(`<html><head><link rel="stylesheet" href="style.bundle.css"></head><body>`);
     const stream = renderToPipeableStream(
         <div id="root">
         <StaticRouter location={request.url}>

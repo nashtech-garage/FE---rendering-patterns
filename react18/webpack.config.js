@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 process.env.NODE_ENV = 'development';
 process.env.BABEL_ENV = 'development';
@@ -16,15 +17,21 @@ const clientConfig = {
     },
     extensions: ['.js', '.tsx', '.json', '.css'],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "style.bundle.css",
+      runtime: false,
+    }),
+  ],
   module: {
     rules: [
         {
             test: /\.(js|jsx|tsx)$/i,
-            use: [{ loader: 'babel-loader' }],
+            use: ['babel-loader'],
         },
         {
             test: /\.(css)$/i,
-            use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
         },
     ],
   },
@@ -43,15 +50,21 @@ const serverConfig = {
     },
     extensions: ['.js', '.tsx', '.json', '.css'],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "style.bundle.css",
+      runtime: false,
+    }),
+  ],
   module: {
     rules: [
         {
             test: /\.(js|jsx|tsx)$/i,
-            use: [{ loader: 'babel-loader' }],
+            use: ['babel-loader'],
         },
         {
             test: /\.(css)$/i,
-            use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
         },
     ],
   },

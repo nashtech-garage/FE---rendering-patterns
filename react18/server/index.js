@@ -6,7 +6,7 @@ const { render } = require("./render");
 app.use(express.static(path.resolve(__dirname, "../build")));
 app.use(express.static(path.resolve(__dirname, "../public")));
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   render(req, res);
 });
 
