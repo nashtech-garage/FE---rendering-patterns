@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function Slider() {
+    useEffect(() => console.log("Slider"), []);
     return (<div className='my-4 w-full'>
         <Carousel showThumbs={true} dynamicHeight={false} width="100%" centerMode={true}>
             <div>
