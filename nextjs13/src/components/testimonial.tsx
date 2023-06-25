@@ -1,6 +1,10 @@
+"use client"
+import { useEffect } from 'react';
+// @ts-ignore  
 import ReactTestimonial from 'react-testimonial';
 
 export default function Testimonial() {
+    useEffect(() => console.log("Testimonial"), []);
     return (<section className='my-4 w-full'>
         <h2 className="my-2">CLIENT SAID</h2>
         <ReactTestimonial>
