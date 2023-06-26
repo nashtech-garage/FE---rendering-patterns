@@ -1,4 +1,7 @@
 // Server Component if not define "use client"
+// @ts-ignore  
+import sanitizeHtml from 'sanitize-html'; // 206K (63.3K gzipped)
+
 async function getData(id: number) {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -10,8 +13,9 @@ async function getData(id: number) {
 
 export default async function RSCProduct({id}: {id: number}) {
     const random = await getData(id);
+    const html = sanitizeHtml(`Image ${String(random)}`);
     return (<>
         <img src={`/${random}.png`} alt={`Image ${random}`} width={'600'} height={'600'} />
-        <p className="legend my-2">Image {String(random)}</p>
+        <p className="legend my-2">{html}</p>
     </>)
 }
